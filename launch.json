@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Your Launch Config",
+      "type": "node",
+      "request": "launch",
+      "program": "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator",
+      "preLaunchTask": "Open iOS Simulator"
+    }
+  ]
+}

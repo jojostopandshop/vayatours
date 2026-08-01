@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://vayatours.com/ -->
+<html style="height: 100%; width: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="https://dbfbeb04-ecbf-4bdd-82a4-6519de723256.reamaze.io" target="_parent">--><base href="." target="_parent"><link href="./fonts.css" rel="stylesheet"><link href="./widget.frame.css" rel="stylesheet"><script type="text/javascript" defer="" src="./widget.frame.js"></script></head><body class="rmz-shoutbox-frame-container" style="height: 100%; width: 100vw; overflow: hidden;"><div class="frame-root"><div><div><style> /* reset */
+        html {
+          box-sizing: border-box;
+        }
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        html, body, .frame-root, .frame-root > div, .frame-content, .frame-content {
+          height: 100%;
+          width: 100%;
+        }
+        input.disabled, textarea.disabled {
+          background: #eee;
+        }
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+        	margin: 0;
+        	padding: 0;
+        	border: 0;
+        	font-size: 100%;
+        	font: inherit;
+        	vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+        	display: block;
+        }
+        body {
+        	line-height: 1;
+        }
+        ol, ul {
+        	list-style: none;
+        }
+        blockquote, q {
+        	quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+        	content: '';
+        	content: none;
+        }
+        table {
+        	border-collapse: collapse;
+        	border-spacing: 0;
+        }
+        a {
+          text-decoration: none;
+        }
+
+
+        /* custom reset css */
+        input, button, select, textarea {
+          font-family: "Nunito",Helvetica,Arial,sans-serif;
+          font-size: 14px;
+        }
+        input:focus, button:focus {
+          outline: none;
+        }
+        body {
+          line-height: 1.35;
+          font-size: 14px;
+          -webkit-text-size-adjust: 100%;
+        }
+        a:hover, body button:hover {
+          opacity: 0.8;
+        }
+        body .anim-btn {
+          transition: all 0.2s linear;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        body .anim-btn-shadow:hover, body .anim-btn-shadow:focus {
+          box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.07);
+        }
+        body .anim-btn:hover, body .anim-btn:focus {
+          transform: translate3d(0,-3px,0);
+        }
+        b, strong, h1, h2, h3, h4, h5, h6 {
+          font-weight: bold;
+        }
+        i, em {
+          font-style: italic;
+        }
+        a {
+          word-wrap: break-word;
+        }
+        blockquote {
+          padding: 0px 0 0 10px;
+          margin: 0 0 15px;
+          border-left: 2px solid #ddd;
+        }
+        h1 {
+          font-size: 2em;
+          margin: .5em 0;
+        }
+        h2 {
+          font-size: 1.5em;
+          margin: .67em 0;
+        }
+        h3 {
+          font-size: 1.17em;
+          margin: .75em 0;
+        }
+        h4 {
+          margin: .83em 0;
+        }
+        h5 {
+          font-size: 0.83em;
+          margin: 1.12em 0;
+        }
+        h6 {
+          font-size: 0.75em;
+          margin: 1.5em 0;
+        }
+
+        .btn {
+          display: inline-block;
+          padding: 6px 25px;
+          margin-bottom: 0;
+          line-height: 20px;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          margin: 0px;
+          border-radius: 20px;
+        }
+        .btn.disabled, body .btn[disabled] {
+          opacity: 0.65;
+          filter: alpha(opacity=65);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          background-image: none;
+          cursor: default;
+        }
+        .btn.btn-link {
+          border: none;
+          background: none;
+          text-decoration: underline;
+          padding: 5px 13px;
+        }
+        select,
+        textarea,
+        input[type="text"],
+        input[type="password"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="week"],
+        input[type="number"],
+        input[type="email"],
+        input[type="url"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"],
+        .uneditable-input {
+          display: inline-block;
+          height: 37px;
+          padding: 10px 6px 4px;
+          margin-bottom: 10px;
+          font-size: 14px;
+          line-height: 20px;
+          vertical-align: middle;
+          outline: none;
+        }
+        input[placeholder].placeholder, textarea[placeholder].placeholder {
+          color: #aaa;
+        }
+      /* popup css */
+          #content-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            -webkit-overflow-scrolling: touch;
+          }
+          #content-container.content-flex {
+            display: flex;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            flex-direction: column;
+            -webkit-box-direction: normal;
+            -webkit-box-orient: vertical;
+            -moz-box-direction: normal;
+            -moz-box-orient: vertical;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+          }
+          #content-container.content-flex #header, #content-container.content-flex #footer {
+            -webkit-flex-shrink: 0;
+            -moz-flex-shrink: 0;
+            flex-shrink: 0;
+            -ms-flex: 0 1 auto;
+            font-size: 1em;
+          }
+          #content-container.content-flex #content {
+            flex-grow: 1;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex: 1 1 auto;
+          }
+          #content-container.content-flex #content.no-grow {
+            flex-grow: 0;
+            -webkit-box-flex: 0;
+            -moz-box-flex: 0;
+            -webkit-flex-grow: 0;
+            -ms-flex: 0 1 auto;
+          }
+          body {
+            color: #333;
+            -webkit-overflow-scrolling: touch;
+          }
+          #header {
+            padding: 15px 35px;
+          }
+          #content {
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-right: 2px;
+            height: 100%;
+            -webkit-overflow-scrolling: touch;
+          }
+          #content.attributed #content-inner {
+            min-height: calc(100% - 28px);
+          }
+          #footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 10px 0;
+            box-shadow: 0px 41px 20px 40px rgba(0,0,0,0.05);
+          }
+          ::-webkit-scrollbar {
+            width: 5px;
+            background: #fff;
+          }
+          ::-webkit-scrollbar-button {
+            height: 0;
+            width: 0;
+            display: none;
+          }
+          ::-webkit-scrollbar-corner {
+            background: transparent;
+          }
+          ::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            box-shadow: inset 0 -3px 0 0 #fff, inset 0 3px 0 0 #fff;
+            background-color: #dededecc;
+          }
+        </style><style>body #header {
+        background: #969696;
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.2em;
+      }
+
+      body #header a,
+      body #header a:visited,
+      body #header a:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+
+      body a,
+      body a:visited,
+      body a:hover {
+        color: #969696;
+      }
+      body {
+        font-family: "Nunito", Helvetica, Arial, sans-serif;
+      }
+      body .btn,
+      body a.btn,
+      body a.btn:visited,
+      body a.btn:hover {
+        background: #969696;
+        border: none;
+        color: #fff;
+        border-radius: 20px;
+      }
+      body .btn.btn-link {
+        color: #969696;
+        text-decoration: none;
+      }
+      body .btn.btn-link:hover {
+        background: none;
+        color: #969696;
+        text-decoration: underline;
+      }
+      body select,
+      body textarea,
+      body input[type="text"],
+      body input[type="password"],
+      body input[type="datetime"],
+      body input[type="datetime-local"],
+      body input[type="date"],
+      body input[type="month"],
+      body input[type="time"],
+      body input[type="week"],
+      body input[type="number"],
+      body input[type="email"],
+      body input[type="url"],
+      body input[type="search"],
+      body input[type="tel"],
+      body input[type="color"],
+      body .uneditable-input,
+      body .faux-input,
+      body label.checkbox {
+        background: #fff;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        color: #000;
+      }
+      body select {
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+      }
+      body #body-container textarea {
+        border: 1px solid #ddd;
+      }
+      </style></div><style>
+        #header .nav-c {
+          display: table-cell;
+          vertical-align: top;
+          text-align: center;
+        }
+        #header .nav-c-l, #header .nav-c-r {
+          width: 35px;
+        }
+        #header #secondary-header {
+          text-align: center;
+          font-size: 1em;
+          margin: 1em 1em 0 1em;
+        }
+        #header #secondary-header .staff-avatars {
+          margin-bottom: 0.8em;
+          height: 52px;
+        }
+        #header .staff-avatars {
+          height: 52px;
+        }
+        #header #secondary-header .staff-avatars img, 
+        #header .staff-avatars img {
+          width: 52px;
+          height: 52px;
+          object-fit: cover;
+          border-radius: 52px;
+          margin-left: -10px;
+          background: #fff;
+          border: 1px solid #fff;
+          display: inline-block;
+          color: #0000;
+        }
+        #header #secondary-header .staff-avatars img:first-child {
+          margin-left: 0;
+        }
+        #header #secondary-header .availability {
+          font-size: 0.9em;
+        }
+        #header #secondary-header a {
+          margin: 0 15px;
+        }
+        #secondary-header #misc-channels,
+        #secondary-header #chat-actions {
+          margin: 0.8em 2em 0 2em;
+          padding-top: 0.8em;
+          border-top: 1px solid rgba(255,255,255,0.5);
+        }
+        @media screen and (max-width: 480px) {
+          #secondary-header #misc-channels,
+          #secondary-header #chat-actions {
+            margin: 0.8em 0 0 0;
+          }
+        }
+        #secondary-header #misc-channels a {
+          margin: 0 15px;
+          display: inline-block;
+          font-size: 1.4em;
+        }
+        #secondary-header #misc-channels.misc-channels-smaller a {
+          margin: 0 10px;
+          display: inline-block;
+          font-size: 1.1em;
+        }
+        .rmz-fade {
+          transition: opacity 250ms ease-in;
+          opacity: 0.01
+        }
+        .rmz-fade.in {
+          opacity: 1;
+        }
+
+        .card:last-child {
+          margin-bottom: 0;
+        }
+        .card {
+          margin: 0 20px 20px 20px;
+          padding: 15px 20px;
+          box-shadow: 0 3px 20px 0 rgba(0,0,0,.07), 0 0px 1px 0 rgba(0,0,0,.2);
+          background: #fafafa;
+          border-radius: 5px 10px;
+          overflow: hidden;
+          border-bottom: 1px solid #969696;
+        }
+        .card .card-header {
+          font-weight: bold;
+          color: #666;
+          margin-bottom: 10px;
+        }
+        .card .card-body {
+          position: relative;
+        }
+        .card .card-body.full {
+          margin: 0 -20px;
+        }
+        .card .card-footer {
+          margin-top: 10px;
+        }
+        .card input, .card textarea {
+          background: #fff;
+          padding: 0 10px;
+          width: 100%;
+          opacity: 0.6;
+          transition: opacity 250ms linear;
+        }
+        .card input:focus, .card textarea:focus {
+          opacity: 1;
+        }
+      </style><div id="content-container" class="content-flex"><div id="header" style="padding-left: 15px; padding-right: 15px; position: relative; z-index: 1;"><div style="display: table; width: 100%;"><div style="display: table-row;"><div class="nav-c nav-c-l" id="nav-buttons" style="position: relative;"><div style="width: 35px; height: 1px;"></div></div><div class="nav-c" style="width: 100%;"><div id="nav-c-header">Contact Us</div></div><div class="nav-c-r"></div></div></div><div id="secondary-header"><div class="staff-avatars"><img title="Vaya Tours" src="./missing-8-36746b55ace77df1d1550b7f5691ea7c6f9c45d5f25b60bff8a5b937668dcb44.png" style="position: relative; z-index: 3;"></div><div class="availability">We'll respond as soon as we can.</div></div></div><div id="content" class=""><div id="content-inner" style="padding: 20px 0px 10px;"><div id="conversation-list-card" class="card"><div style="display: block;"><div class="card-header" style="font-size: 1em;">Recent Conversations</div><div class="card-body full"><div style="margin-top: -5px; font-size: 1em;"><div><style>
+              #recent-conversations li {
+                display: -ms-flexbox;
+                display: -ms-flex;
+                display: -moz-flex;
+                display: -webkit-flex;
+                display: flex;
+                flex-wrap: nowrap;
+                cursor: pointer;
+                border-left: 1px solid transparent;
+                padding: 12px 15px;
+                transition: all 0.25s linear;
+                opacity: 0.8;
+              }
+              #recent-conversations li .body {
+                opacity: 0.85;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+              #recent-conversations li.unread {
+                opacity: 1;
+                color: #000;
+                font-weight: bold;
+              }
+              #recent-conversations li:hover,
+              #recent-conversations li.unread:hover {
+                border-left: 1px solid #969696;
+              }
+              #recent-conversations li div.icon {
+                color: #d0d0d0;
+                width: 20px;
+                overflow: hidden;
+                font-size: 16px;
+                position: relative;
+              }
+              #recent-conversations li div.icon i {
+                margin-top: -8px;
+                position: relative;
+                top: 50%;
+                display: block;
+                text-align: center;
+              }
+              #recent-conversations li .main .name {
+                display: -ms-flexbox;
+                display: -ms-flex;
+                display: -moz-flex;
+                display: -webkit-flex;
+                display: flex;
+                flex-wrap: nowrap;
+                margin-bottom: 2px;
+                align-items: center;
+              }
+              #recent-conversations li .main .name .thumb {
+                width: 25px;
+                height: 20px;
+                padding-right: 5px;
+              }
+              #recent-conversations li .main .name .thumb img {
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+              }
+              #recent-conversations li .main .name .names {
+                width: 100%;
+                -ms-flex: 1;
+                -moz-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+              #recent-conversations li .main .name .timestamp {
+                flex-shrink: 0;
+                font-size: 0.8em;
+                white-space: nowrap;
+                color: #737373;
+                text-align: right;
+              }
+              #recent-conversations li .main {
+                width: 100%;
+                overflow: hidden;
+                padding-left: 10px;
+                -ms-flex: 1;
+                -moz-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+              }
+            </style><ul id="recent-conversations" class="rmz-fade in"><li class=" unread"><div class="icon"><i class="fas rmzfa rmzfa-rss"></i></div><div class="main"><div class="name"><div class="thumb"><img src="./missing-8-36746b55ace77df1d1550b7f5691ea7c6f9c45d5f25b60bff8a5b937668dcb44.png"></div><div class="names">Vaya Tours</div><div class="timestamp">12:31 PM</div></div><p class="body">Let me know if you have any questions!</p></div></li></ul></div></div></div></div></div></div></div><div id="footer" style="text-align: center; box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 25px 0px;"><style>
+            #footer a.btn {
+              margin: 0 12px;
+            }
+          </style><a aria-label="Send a Message" tabindex="0" role="button" class="btn btn-primary anim-btn anim-btn-shadow" style="margin-bottom: 5px;">Send a Message</a></div></div></div></div></body></html>
