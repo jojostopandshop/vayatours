@@ -116,6 +116,55 @@ body#tours-page  {
 
     
 
+/* ==========================================================================
+   UNDER CONSTRUCTION OVERLAY CARD
+   ========================================================================== */
+
+.construction-overlay {
+    position: fixed; /* Keeps it locked on screen even if the page structure shifts */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the card perfectly on the screen */
+    z-index: 99999; /* Higher value forces it on top of all slideshow layers, buttons, and text */
+    
+    max-width: 550px;
+    width: 90%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.96); /* Off-white background with subtle opacity */
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Deep drop shadow for depth separation */
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Construction Icon */
+.construction-overlay .icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Heading Style */
+.construction-overlay h1 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+/* Description Text */
+.construction-overlay p {
+    font-size: 1.15rem;
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* Strong Text Highlight */
+.construction-overlay p strong {
+    color: #000000;
+    font-weight: 700;
+}
 
 
   
