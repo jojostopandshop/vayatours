@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Update menu button underlines based on sidebar state
   function updateMenuButtonUnderlines() {
     document.querySelectorAll('.top-bar button').forEach(btn => {
+      // Get the sidebar ID from the button's onclick attribute
       const onclick = btn.getAttribute('onclick') || '';
       const match = onclick.match(/toggleMenu\(['"]([^'"]+)['"]\)/);
       
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const sidebarId = match[1];
         const sidebar = document.getElementById(sidebarId);
         
+        // Add menu-open class if its sidebar is open, remove otherwise
         if (sidebar && sidebar.classList.contains('open')) {
           btn.classList.add('menu-open');
         } else {
@@ -394,7 +396,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  
+  // -----------------------------
+  // Images - slide (hero-carousel2)
+  // -----------------------------
+  (function initHeroCarousel2() {
+    const list = document.querySelector(".hero-carousel2__list");
+    const slides = document.querySelectorAll(".hero-carousel2__item");
+    if (!list || slides.length === 0) return;
+
+    const total = slides.length;
+    const slideTime = 1500; // ms
+    const pauseTime = 2500; // ms
+    let index = 0;
+
+    // ensure CSS transition initially set
+    list.style.transition = `transform ${slideTime / 1000}s ease-in-out`;
+    list.style.transform = `translateX(0px)`;
+
+    function nextSlide() {
+      index++;
+
+      if (index >= total) {
+        // jump back to start seamlessly
+        list.style.transition = "none";
+        list.style.transform = "translateX(0px)";
+        index = 1;
+
+        // allow the browser to reflow then animate to index 1
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            list.style.transition = `transform ${slideTime / 1000}s ease-in-out`;
+            list.style.transform = `translateX(-${index * window.innerWidth}px)`;
+          });
+        });
+      } else {
+        list.style.transition = `transform ${slideTime / 1000}s ease-in-out`;
+        list.style.transform = `translateX(-${index * window.innerWidth}px)`;
+      }
+    }
+
+    const intervalId = setInterval(nextSlide, pauseTime + slideTime);
+
+    // adjust on resize so slide width stays correct
+    window.addEventListener("resize", () => {
+      list.style.transition = "none";
+      list.style.transform = `translateX(-${index * window.innerWidth}px)`;
+    });
+
+    // expose interval id in case needed later
+    list.__carouselIntervalId = intervalId;
+  })();
+
   // -----------------------------
   // Mobile - Section (toggleMenu2)
   // -----------------------------
@@ -421,3 +473,117 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// ============================================
+// MENU FUNCTIONS
+// ============================================
+
+function openMainMenu() {
+  document.getElementById("mainMenu").classList.add("active");
+  document.getElementById("searchBoxM").classList.add("hide");
+}
+
+function closeMenus() {
+  document.getElementById("mainMenu").classList.remove("active");
+  document.getElementById("europeMenu").classList.remove("active");
+  document.getElementById("searchBoxM").classList.remove("hide");
+}
+
+function openTravelStylesMenu() {
+  document.getElementById("travelStylesMenu").classList.add("active");
+  document.getElementById("searchBoxM").classList.add("hide");
+}
+
+function closeTravelStylesMenu() {
+  document.getElementById("travelStylesMenu").classList.remove("active");
+  document.getElementById("searchBoxM").classList.remove("hide");
+}
+
+function openDealsMenu() {
+  document.getElementById("dealsMenu").classList.add("active");
+  document.getElementById("searchBoxM").classList.add("hide");
+}
+
+function closeDealsMenu() {
+  document.getElementById("dealsMenu").classList.remove("active");
+  document.getElementById("searchBoxM").classList.remove("hide");
+}
+
+function openAboutMenu() {
+  document.getElementById("aboutMenu").classList.add("active");
+  document.getElementById("searchBoxM").classList.add("hide");
+}
+
+function closeAboutMenu() {
+  document.getElementById("aboutMenu").classList.remove("active");
+  document.getElementById("searchBoxM").classList.remove("hide");
+}
+
+// ============================================
+// REGION MENU FUNCTIONS
+// ============================================
+
+function openEuropeMenu() {
+  document.getElementById("europeMenu").classList.add("active");
+}
+
+function closeEuropeMenu() {
+  document.getElementById("europeMenu").classList.remove("active");
+}
+
+function openMexicoMenu() {
+  document.getElementById("mexicoMenu").classList.add("active");
+}
+
+function closeMexicoMenu() {
+  document.getElementById("mexicoMenu").classList.remove("active");
+}
+
+function openUsCanadaMenu() {
+  document.getElementById("uscanadaMenu").classList.add("active");
+}
+
+function closeUsCanadaMenu() {
+  document.getElementById("uscanadaMenu").classList.remove("active");
+}
+
+function openLatinamericaMenu() {
+  document.getElementById("latinamericaManu").classList.add("active");
+}
+
+function closeLatinamericaMenu() {
+  document.getElementById("latinamericaManu").classList.remove("active");
+}
+
+function openAsiaMenu() {
+  document.getElementById("asiaMenu").classList.add("active");
+}
+
+function closeAsiaMenu() {
+  document.getElementById("asiaMenu").classList.remove("active");
+}
+
+function openAfricaMenu() {
+  document.getElementById("africaMenu").classList.add("active");
+}
+
+function closeAfricaMenu() {
+  document.getElementById("africaMenu").classList.remove("active");
+}
+
+function openMiddleastMenu() {
+  document.getElementById("middleastMenu").classList.add("active");
+}
+
+function closeMiddleastMenu() {
+  document.getElementById("middleastMenu").classList.remove("active");
+}
+
+function openPolarMenu() {
+  document.getElementById("PolarMenu").classList.add("active");
+}
+
+function closePolarMenu() {
+  document.getElementById("PolarMenu").classList.remove("active");
+}

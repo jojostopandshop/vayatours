@@ -21,13 +21,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/rfy8czy.css">
  
 </head>
-
-
 <body class="mexico-caribbean" id="mexico-caribbean">
-
-<div class="container-map">
-<img src="images/Maps/Mexico&carrib-map.png" class="map" alt="map">
-</div>
    <header>
    
    <!-- Search section --> 
@@ -716,6 +710,10 @@
  
  
 
+<div class="container-map">
+<img src="images/Maps/Mexico&carrib-map.png" class="map" alt="map">
+</div>
+
   
 
     
@@ -763,21 +761,7 @@
     </div>
     
   </div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".hero-carousel__item");
-  let current = 0;
 
-  function showNextSlide() {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
-  }
-
-  // change slide every 5 seconds
-  setInterval(showNextSlide, 5000);
-});
-</script>
 
 </body>
 </html>

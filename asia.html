@@ -23,9 +23,6 @@
 
 <body class="asia" id="asia">
 
-<div class="container-map">
-<img src="images/Maps/Asia-map.png" class="map" alt="map">
-</div>
    <header>
    
    <!-- Search section --> 
@@ -707,7 +704,10 @@
 
  
 </header>
- 
+    
+ <div class="container-map">
+<img src="images/Maps/Asia-map.png" class="map" alt="map">
+</div>
   
 
     
@@ -754,21 +754,6 @@
     </div>
     
   </div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".hero-carousel2__item");
-  let current = 0;
-
-  function showNextSlide() {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
-  }
-
-  // change slide every 5 seconds
-  setInterval(showNextSlide, 5000);
-});
-</script>
 
 
 </body>

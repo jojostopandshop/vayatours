@@ -22,10 +22,6 @@
 </head>
 
 <body class="egypt-middle-east" id="egypt-middle-east">
-
-<div class="container-map">
-<img src="images/Maps/MIddleast-map.png" class="map" alt="map">
-</div>
    <header>
    
    <!-- Search section --> 
@@ -339,14 +335,6 @@
 </button>
 
 
-
-   
- 
-
-
-    
-<a class="nameMobile">VAYA TOURS</a>
-
 </div>
 
 <!-- Search Mobile-->
@@ -357,118 +345,312 @@
 <!-- Dropdown Menu Mobile-->
 <div id="dropdownMenu" class="dropdown-menu">
     
-   
-    
-    
-<!-- Explore Toggle Section -->
-    <div class="submenu-container">
-     <div class="search-wrapper">
-    <div class="search-container" id="searchBoxM">
-      
-        <!--  -->
-      
-          <!-- Close Icon -->
-  <button class="close-btn" onclick="closeSearchM()" type="button">
-          <img src="images/close-svgrepo-com.svg" alt="Close"></button>
-          
-          <button class="search-btn" onclick="toggleSearchM()">
-          <img src="images/search-svgrepo-com.svg" alt="Search Icon">
-      </button>
-          <input type="text" class="search-input" id="searchInputM" placeholder="What are you looking for?">
-          
-          
-      
-    
-    
-  </div>
-      </div>   
-      <button class="button-M" onclick="toggleMenu('menuexplore-mobile')">Explore Tours</button>
-        <hr class="gray-line">
-      <div id="menuexplore-mobile" class="side-bar-item" >
-        <nav>
-         <ul class="menu-list-mobile">
+    <!-- Search Section -->
+    <div class="search-wrapper">
+        <div class="search-container" id="searchBoxM">
             
-            <li><a class="menu1" href="europe.html">EUROPE</a></li><hr class="gray-line">
-        <li><a class="menu2" href="mexico-caribbean.html">MEXICO &amp; THE CARIBBEAN</a></li><hr class="gray-line">
-        <li><a class="menu3" href="us-canada.html">US &amp; CANADA</a></li><hr class="gray-line">
-        <li><a class="menu4" href="latinamerica.html">LATIN AMERICA</a></li><hr class="gray-line">
-        <li><a class="menu5" href="asia.html">ASIA</a></li><hr class="gray-line">
-        <li><a class="menu6" href="africa.html">AFRICA</a></li><hr class="gray-line">
-        <li><a class="menu7" href="egypt-middle-east.html">EGYPT &amp; MIDDLE EAST</a></li><hr class="gray-line">
-        <li><a class="menu8" href="polarregions.html">POLAR REGIONS</a></li><hr class="gray-line">
-      </ul>
+            <button class="search-btn" onclick="toggleSearchM()">
+                <img src="images/search-svgrepo-com.svg" alt="Search Icon">
+            </button>
             
-        </nav>
-      </div>
-    
-  
-        <button class="button-M" onclick="toggleMenu('menustyles-mobile')">Travel Styles</button>
-              <hr class="gray-line">
-              
-    <div id="menustyles-mobile" class="side-bar-item">
-  <nav>
-       <ul class="menu-list-mobile">
-      
-        <li><a class="menu1" href="#">UNDISCOVER</a></li> 
-           <hr class="gray-line">
-        <li><a class="menu2" href="#">RELIGIOUS</a></li>
-           <hr class="gray-line">
-        <li><a class="menu3" href="#">NATIONAL PARKS</a></li>
-           <hr class="gray-line">
-        <li><a class="menu4" href="#">CRUISE  TOUR</a></li> 
-           <hr class="gray-line">
-           <li><a class="menu5" href="#">STUDENTS TOURS</a></li>
-            <hr class="gray-line">
-           <li><a class="menu6" href="#">AFFORDABLE TOURS</a></li>
-            <hr class="gray-line">
-       </ul>
-    
-    </nav>
+            <input type="text" class="search-input" id="searchInputM" placeholder="What are you looking for?">
+        </div>
     </div>
-        
-    
- 
-        <button class="button-M" onclick="toggleMenu('menudeals-mobile')">Deals</button>
-          <hr class="gray-line">
-        <div id="menudeals-mobile" class="side-bar-item" >
-<nav>  
-         
-     <ul class="menu-list-mobile">
-    
-      <li><a class="menu1" href="#">US Domestic Sale</a></li>
-         <hr class="gray-line">
-      <li><a class="menu2" href="#">Antarctica Cruise Deals</a></li>
-         <hr class="gray-line">
-      <li><a class="menu3" href="#">Search all trips on sale</a></li>
-         <hr class="gray-line">
-       <li><a class="menu4" href="#">See all deals</a></li>
-         <hr class="gray-line">
-     </ul>
-    
-</nav>
-</div> 
-  
-      
 
-     
-            <button class="button-M" onclick="toggleMenu('menuabout-mobile')">About</button>
-            <hr class="gray-line">
-        <div id="menuabout-mobile" class="side-bar-item" >
-  <nav>
-    <ul class="menu-list-mobile" >
-    
-        <li> <a class="menu1" href="#">Who we are</a></li>
-        <hr class="gray-line">
-        <li> <a class="menu2" href="#">Our purpose</a></li>
-        <hr class="gray-line">
-        <li> <a class="menu3" href="#">Our stories</a></li>
-        <hr class="gray-line">
-    
-    </ul>
-  </nav>
-</div> 
+    <div class="mobile-menu-buttons">
+        
+        <!-- Explore Tours Button -->
+        <div class="explore">
+        <button class="button-M" onclick="openMainMenu()">
+            Explore Tours
+        </button>
+        </div>
+        <!-- MAIN MENU -->
+        <div id="mainMenu" class="sidebar-submenu">
+            
+                <button class="back-btn" onclick="closeMenus()">← Back to menu</button> 
+                <a class="all" href="tours-page.html">See All</a>  
+          
+            
+            <!-- Europe Item -->
+            <div class="menu-item" onclick="openEuropeMenu()">
+                EUROPE →
+            </div>
+
+            <!-- EUROPE SUBMENU -->
+            <div id="europeMenu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn-explore" onclick="closeEuropeMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="europe.html">EUROPE</a>
+                   
+                </div>
+
+                <div class="country-list">
+                    <a href="Find a Europe Tour.html">Find a Europe Tour</a>
+                    <a href="Why Tour Europe.html">Why Tour Europe</a>
+                    <a href="Austria.html">Austria</a>
+                    <a href="Central Eastern Europe.html">Central &amp; Eastern Europe</a>
+                    <a href="England.html">England</a>
+                    <a href="France.html">France</a>
+                    <a href="Germany.html">Germany</a>
+                    <a href="GreeceTurkey.html">Greece &amp; Turkey</a>
+                    <a href="Hungary.html">Hungary</a>
+                    <a href="Ireland.html">Ireland</a>
+                    <a href="ItalySicily.html">Italy &amp; Sicily</a>
+                    <a href="Morocco.html">Morocco</a>
+                    <a href="Netherlands.html">Netherlands</a>
+                    <a href="Poland.html">Poland</a>
+                    <a href="Portugal.html">Portugal</a>
+                    <a href="Scandinavia.html">Scandinavia</a>
+                    <a href="Scotland.html">Scotland</a>
+                    <a href="Spain.html">Spain</a>
+                    <a href="Switzerland.html">Switzerland</a>
+                    <a href="Wales.html">Wales</a>
+                    <a href="Multi-country.html">Multi-country</a>
+                    <a href="Religious Travel.html">Religious Travel</a>
+                </div>
+            </div>
+            
+            <!-- Mexico & Caribbean Item -->
+            <div class="menu-item" onclick="openMexicoMenu()">
+                MEXICO &amp; CARIBBEAN →
+            </div>
+
+            <!-- MEXICO SUBMENU -->
+            <div id="mexicoMenu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn" onclick="closeMexicoMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="mexico-caribbean.html">MEXICO &amp; CARIBBEAN</a>
+                </div>
+
+                <div class="country-list">
+                    <a href="puerto-Rico.html">Puerto Rico</a>
+                    <a href="jamaica.html">Jamaica</a>
+                    <a href="Mexico.html">Mexico</a>
+                    <a href="caribbean-villas.html">Caribbean Villas</a>
+                </div>
+            </div>
+            
+            <!-- US & Canada Item -->
+            <div class="menu-item" onclick="openUsCanadaMenu()">
+                US &amp; CANADA →
+            </div>
+
+            <!-- US CANADA SUBMENU -->
+            <div id="uscanadaMenu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn-explore" onclick="closeUsCanadaMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="us-canada.html">US &amp; CANADA</a>
+                </div>
+
+                <div class="country-list">
+                    <a href="Alaska.html">Alaska</a>  
+                    <a href="Alaska Cruise.html">Alaska Cruise</a>
+                    <a href="Alberta.html">Alberta</a>
+                    <a href="British Columbia.html">British Columbia</a>
+                    <a href="California.html">California</a>
+                    <a href="Hawaii.html">Hawaii</a>
+                    <a href="National Parks of The West.html">National Parks of The West</a>
+                    <a href="Newfoundland and Labrador.html">Newfoundland &amp; Labrador</a>
+                    <a href="Northeastern USA.html">Northeastern USA</a>
+                    <a href="Ontario.html">Ontario</a>
+                    <a href="Quebec.html">Quebec</a>
+                    <a href="Southern USA.html">Southern USA</a>
+                </div>
+            </div>
+            
+            <!-- Latin America Item -->
+            <div class="menu-item" onclick="openLatinamericaMenu()">
+                Latin America →
+            </div>
+
+            <!-- Latin America SUBMENU -->
+            <div id="latinamericaManu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn-explore" onclick="closeLatinamericaMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="latinamerica.html">Latin America</a>
+                </div>
+
+                <div class="country-list">
+                    <a href="Argentina.html">Argentina</a>  
+                    <a href="Bolivia.html">Bolivia</a>
+                    <a href="Central America Cruise.html">Central America</a>
+                    <a href="Chile.html">Chile</a>
+                    <a href="Costa Rica.html">Costa Rica</a>
+                    <a href="Ecuador & Galapagos.html">Ecuador</a>
+                    <a href="Guatemala.html">Guatemala</a>
+                    <a href="Panama.html">Panama</a>
+                    <a href="Patagonia.html">Patagonia</a>
+                    <a href="Peru.html">Peru</a>
+                    <a href="Uruguay.html">Uruguay</a>
+                </div>
+            </div>
+            
+            <!-- Asia Item -->
+            <div class="menu-item" onclick="openAsiaMenu()">
+                Asia →
+            </div>
+
+            <!-- Asia SUBMENU -->
+            <div id="asiaMenu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn-explore" onclick="closeAsiaMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="asia.html">Asia</a>
+                </div>
+
+                <div class="country-list">
+                    <a href="Asia Cruise.html">Asia Cruise</a>  
+                    <a href="China.html">China</a>
+                    <a href="Hong Kong.html">Hong Kong</a>
+                    <a href="India.html">India</a>
+                    <a href="Indonesia.html">Indonesia</a>
+                    <a href="Japan.html">Japan</a>
+                    <a href="Laos.html">Laos</a>
+                    <a href="Malaysia.html">Malaysia</a>
+                    <a href="Nepal.html">Nepal</a>
+                    <a href="Philippines.html">Philippines</a>
+                    <a href="Singapore.html">Singapore</a>
+                    <a href="South Korea.html">South Korea</a>
+                    <a href="Sri Lanka.html">Sri Lanka</a>
+                    <a href="Taiwan.html">Taiwan</a>
+                    <a href="Thailand.html">Thailand</a>
+                    <a href="Tibet.html">Tibet</a>
+                    <a href="Vietnam.html">Vietnam</a>
+                </div>
+            </div>
+            
+            <!-- Africa Item -->
+            <div class="menu-item" onclick="openAfricaMenu()">
+                Africa →
+            </div>
+
+            <!-- Africa SUBMENU -->
+            <div id="africaMenu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn-explore" onclick="closeAfricaMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="africa.html">Africa</a>
+                </div>
+
+                <div class="country-list">
+                    <a href="Botswana.html">Botswana</a>  
+                    <a href="Cape Verde.html">Cape Verde</a>
+                    <a href="Ghana.html">Ghana</a>
+                    <a href="Kenya.html">Kenya</a>
+                    <a href="Madagascar.html">Madagascar</a>
+                    <a href="Mauritius.html">Mauritius</a>
+                    <a href="Morocco.html">Morocco</a>
+                    <a href="Mozambique.html">Mozambique</a>
+                    <a href="Namibia.html">Namibia</a>
+                    <a href="Republic of the Congo.html">Republic of the Congo</a>
+                    <a href="Senegal.html">Senegal</a>
+                    <a href="Seychelles.html">Seychelles</a>
+                    <a href="South Africa.html">South Africa</a>
+                    <a href="Tanzania.html">Tanzania</a>
+                    <a href="Uganda.html">Uganda</a>
+                    <a href="Zambia.html">Zambia</a>
+                    <a href="Zimbabwe.html">Zimbabwe</a>
+                </div>
+            </div>
+            
+            <!-- Egypt & Middle East Item -->
+            <div class="menu-item" onclick="openMiddleastMenu()">
+                Egypt &amp; Middle East →
+            </div>
+
+            <!-- Middle East SUBMENU -->
+            <div id="middleastMenu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn-explore" onclick="closeMiddleastMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="egypt-middle-east.html">Egypt &amp; Middle East</a>
+                </div>
+
+                <div class="country-list">
+                    <a href="Egypt.html">Egypt</a>  
+                    <a href="Jordan.html">Jordan</a>
+                    <a href="Oman.html">Oman</a>
+                    <a href="UAE.html">UAE</a>
+                </div>
+            </div>
+            
+            <!-- Polar Region Item -->
+            <div class="menu-item" onclick="openPolarMenu()">
+                POLAR REGION →
+            </div>
+
+            <!-- Polar SUBMENU -->
+            <div id="PolarMenu" class="sidebar-submenu">
+                <div class="menu-header">
+                    <button class="back-btn-explore" onclick="closePolarMenu()">← Back to Explore Tours</button>
+                    <a class="explore-name" href="polarregions.html">POLAR REGION</a>
+                </div>
+
+                <div class="country-list">
+                    <a href="Antarctica.html">Antarctica</a>  
+                    <a href="Arctic.html">Arctic</a> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Travel Styles Button -->
+        <button class="button-M" onclick="openTravelStylesMenu()">
+            Travel Styles
+        </button>
+
+        <!-- TRAVEL STYLES MENU -->
+        <div id="travelStylesMenu" class="sidebar-submenu">
+            <div class="menu-header">
+                <button class="back-btn" onclick="closeTravelStylesMenu()">← Back to menu</button>
+            </div>
+
+            <div class="country-list">
+                <a href="#">UNDISCOVER</a>
+                <a href="#">RELIGIOUS</a>
+                <a href="#">NATIONAL PARKS</a>
+                <a href="#">CRUISE TOUR</a>
+                <a href="#">STUDENT TOURS</a>
+                <a href="#">AFFORDABLE TOURS</a>
+            </div>
+        </div>
+
+        <!-- Deals Button -->
+        <button class="button-M" onclick="openDealsMenu()">
+            Deals
+        </button>
+
+        <!-- DEALS MENU -->
+        <div id="dealsMenu" class="sidebar-submenu">
+            <div class="menu-header">
+                <button class="back-btn" onclick="closeDealsMenu()">← Back to menu</button>
+            </div>
+
+            <div class="country-list">
+                <a href="#">US Domestic Sale</a>
+                <a href="#">Antarctica Cruise Deals</a>
+                <a href="#">Search all trips on sale</a>
+                <a href="#">See all deals</a>
+            </div>
+        </div>
+
+        <!-- About Button -->
+        <button class="button-M" onclick="openAboutMenu()">
+            About
+        </button>
+
+        <!-- ABOUT MENU -->
+        <div id="aboutMenu" class="sidebar-submenu">
+            <div class="menu-header">
+                <button class="back-btn" onclick="closeAboutMenu()">← Back to menu</button>
+            </div>
+
+            <div class="country-list">
+                <a href="#">Who we are</a>
+                <a href="#">Our purpose</a>
+                <a href="#">Our stories</a>
+            </div>
+        </div>
+
+    </div>
 </div>
-     </div>     
   
           
   
@@ -530,7 +712,9 @@
  
 </header>
  
- 
+ <div class="container-map">
+<img src="images/Maps/MIddleast-map.png" class="map" alt="map">
+</div>
 
   
     
